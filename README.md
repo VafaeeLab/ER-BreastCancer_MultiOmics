@@ -1,3 +1,10 @@
-# Using machine learning to predict endocrine resistance in ER+ Breast Cancer
+# A Multiomics Investigation of Endocrine Resistance in Breast Cancer
 
-Supplementary scripts for my final thesis. Notebooks are organised by comparison type.
+Cancer is one of the leading causes of premature mortality worldwide. The majority of breast cancers are Estrogen Receptor positive (ER+) and are thus candidates for treatment using endocrine therapy. Unfortunately, 30-50% of people exhibit either intrinsic or acquired endocrine resistance, with the mechanisms behind this still largely unknown.
+In this thesis I set out to explore endocrine resistance through a multiomics lens. There were three core parts to my approach. First, a custom proof-of-concept multiomics model was designed and trained on post-treatment DNA methylation, oral and stool metagenomics data to try and predict patient’s endocrine response. This model performed remarkably well, achieving an AUC of 0.99 and an accuracy of 95%. On an individual classifier level, methylation data proved to be the most informative, with gut microbiota the worst individual performer. This was surprising given the well documented link between gut microbiota and estrogen through the estrobolome.
+Secondly, models were constructed on the pre-treatment metagenomics data alongside age matched control samples to try and identify biomarkers for ER+ breast cancer. While these models performed only moderately well, they identified a number of bacteria that were differentially abundant between cancer and control with the majority being elevated in control patients.
+Finally, a clinical models were constructed on a minimal set of pre-treatment features to attempt to identify endocrine resistance early. This model performed impressively as well, reporting an AUC of 0.97 and an accuracy of 0.95 using an SVM trained on just five prognostic markers. The power of these features to predict long-term outcomes was also investigated, with the same five markers predicting breast cancer death with an AUC of 0.85 and an accuracy of 0.79.
+
+
+![image](https://github.com/user-attachments/assets/6b669f22-94fa-4423-aede-5e48159a147c)
+
